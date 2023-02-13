@@ -5,6 +5,7 @@
 	$: ({ posts } = data);
 </script>
 
+
 <div class="p-10">
 	<h1 class="text-3xl">Welcome to psl-stack</h1>
 	<h3 class="text-xl">With:</h3>
