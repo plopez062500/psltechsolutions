@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { dataset_dev } from 'svelte/internal';
 	import '../app.css';
 
 	import type { PageData } from './$types';

@@ -56,10 +56,10 @@ async function getUser(email: string) {
 	return user;
 }
 
-async function createSession(user: User) {
+async function createSession(user: User, expireDateInSeconds?: number) {
 	const _1weekFromNow = new Date().getSeconds() + 60 * 60 * 24 * 7;
 	const eat = new Date();
-	eat.setSeconds(_1weekFromNow);
+	eat.setSeconds(expireDateInSeconds ? expireDateInSeconds : _1weekFromNow);
 
 	const session = await prisma.session.create({
 		data: {

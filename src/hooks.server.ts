@@ -14,19 +14,21 @@ export const handle: Handle = async function ({ resolve, event }) {
 			event.locals.session = session;
 		} catch (err) {
 			console.log(err);
-      event.cookies.delete('session_id');
+			event.cookies.delete('session_id');
 		}
 	}
 
-	if (event.locals.session) { //Autheticated 
+	if (event.locals.session) {
+		//Autheticated
 		if (event.url.pathname.startsWith('/login')) {
-			throw redirect(301,`${event.url.origin}/`);
+			throw redirect(301, `${event.url.origin}/`);
 		}
-	}else{ //Not Authenticated
-    if (event.url.pathname.startsWith('/logout')){
-      throw redirect(301, "/");
-    }
-  }
+	} else {
+		//Not Authenticated
+		if (event.url.pathname.startsWith('/logout')) {
+			throw redirect(301, '/');
+		}
+	}
 
 	const response = await resolve(event);
 
