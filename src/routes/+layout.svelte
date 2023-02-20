@@ -21,10 +21,10 @@
 		>
 
 		{#if user}
-		<a
-		class="px-8 py-6 text-center text-blue-500 transition-all border-b-blue-500 hover:border-b-8 "
-		href="/posts/new">New Post</a
-	>
+			<a
+				class="px-8 py-6 text-center text-blue-500 transition-all border-b-blue-500 hover:border-b-8 "
+				href="/posts/new">New Post</a
+			>
 		{/if}
 	</div>
 
@@ -45,6 +45,13 @@
 			text-white bg-blue-500 border border-blue-500 rounded-md
 			 hover:text-blue-500 hover:bg-white transition-all"
 				href="/login">Login</a
+			>
+
+			<a
+				class="px-8 py-3 text-bold text-center
+				text-blue-500 bg-white border border-blue-500 rounded-md
+				 hover:text-white hover:bg-blue-500 transition-all"
+				href="/signup">Signup</a
 			>
 		{/if}
 	</div>

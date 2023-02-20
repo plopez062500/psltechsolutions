@@ -11,9 +11,14 @@ datasource db {
 }
 
 model Post {
-  id    String @id @default(uuid())
-  title String
-  body  String
+  id        String @id @default(uuid())
+  title     String
+  body      String
+  user      User   @relation(fields: [userEmail], references: [email])
+  userEmail String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model User {
@@ -24,14 +29,15 @@ model User {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  Post      Post[]
 }
 
 model Session {
-  id        String   @id @unique @default(uuid())
-  iat       DateTime @default(now())
-  eat       DateTime
-  revoked   Boolean
+  id      String   @id @unique @default(uuid())
+  iat     DateTime @default(now())
+  eat     DateTime
+  revoked Boolean
 
-  user      User     @relation(fields: [userEmail], references: [email])
+  user      User   @relation(fields: [userEmail], references: [email])
   userEmail String
 }

@@ -1,6 +1,6 @@
 // See https://kit.svelte.dev/docs/types#app
 
-import type { Session, User } from '$lib/auth.server';
+import type { Session, User } from '$lib/prisma/auth.server';
 import type { PrismaClient } from '@prisma/client';
 
 // for information about these interfaces

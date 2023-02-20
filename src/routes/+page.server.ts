@@ -1,5 +1,5 @@
 import type { Actions, PageServerLoad } from "./$types";
-import { prisma } from "../lib/prisma.server";
+import { prisma } from "../lib/prisma/prisma.server";
 import { fail } from "@sveltejs/kit";
 
 

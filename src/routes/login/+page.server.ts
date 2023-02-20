@@ -1,4 +1,4 @@
-import { AuthError, login, type User } from '$lib/auth.server';
+import { AuthError, login, type User } from '$lib/prisma/auth.server';
 import { fail, redirect, type Actions } from '@sveltejs/kit';
 import { ZodError } from 'zod';
 import { loginFormSchema } from '$lib/schema/login-form';

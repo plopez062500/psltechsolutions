@@ -1,4 +1,4 @@
-import { logout } from '$lib/auth.server';
+import { logout } from '$lib/prisma/auth.server';
 import { redirect, type Actions } from '@sveltejs/kit';
 import type { PageServerLoad } from '../$types';
 

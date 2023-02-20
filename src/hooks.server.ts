@@ -1,5 +1,5 @@
 import { goto } from '$app/navigation';
-import { authenticateSession } from '$lib/auth.server';
+import { authenticateSession } from '$lib/prisma/auth.server';
 import { redirect, type Handle } from '@sveltejs/kit';
 
 export const handle: Handle = async function ({ resolve, event }) {
