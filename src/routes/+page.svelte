@@ -1,6 +1,16 @@
 <script lang="ts">
 	import ContactForm from '$lib/components/ContactForm.svelte';
 	import Sketch from '$lib/components/Sketch.svelte';
+
+	function scrollIntoView(element) {
+		const e = document.getElementById('section-pc-repair');
+
+		if (!e) return;
+
+		e.scrollIntoView({
+			behavior: 'smooth'
+		});
+	}
 </script>
 
 <div class="flex h-[85vh]  justify-around items-center w-screen">
@@ -11,6 +21,7 @@
 		<div class="mt-4 w-full flex flex-col sm:flex-row justify-between gap-1 sm:gap-4">
 			<button
 				class="w-full px-8 py-3 bg-teal-500 border border-teal-500 text-white rounded-sm transition-all hover:bg-white hover:text-teal-500"
+				on:click={scrollIntoView}
 			>
 				Learn More
 			</button>
@@ -29,7 +40,7 @@
 </div>
 
 <div class="flex flex-col  items-center w-[95%] max-w-[900px] mx-auto">
-	<section class="my-10 w-full ">
+	<section id="section-pc-repair" class="my-10 w-full ">
 		<h2 class="mb-4 text-teal-500 text-2xl font-bold ">PC REPAIR</h2>
 
 		<p class="text-lg">
