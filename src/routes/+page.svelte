@@ -2,8 +2,8 @@
 	import ContactForm from '$lib/components/ContactForm.svelte';
 	import Sketch from '$lib/components/Sketch.svelte';
 
-	function scrollIntoView(element) {
-		const e = document.getElementById('section-pc-repair');
+	function scrollIntoView(id: string) {
+		const e = document.getElementById(id);
 
 		if (!e) return;
 
@@ -21,7 +21,7 @@
 		<div class="mt-4 w-full flex flex-col sm:flex-row justify-between gap-1 sm:gap-4">
 			<button
 				class="w-full px-8 py-3 bg-teal-500 border border-teal-500 text-white rounded-sm transition-all hover:bg-white hover:text-teal-500"
-				on:click={scrollIntoView}
+				on:click={() => scrollIntoView('section-pc-repair')}
 			>
 				Learn More
 			</button>
