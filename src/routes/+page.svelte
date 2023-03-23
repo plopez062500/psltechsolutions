@@ -87,9 +87,3 @@
 		<ContactForm />
 	</section>
 </div>
-
-<style>
-	:global(body) {
-		overflow-x: hidden;
-	}
-</style>
